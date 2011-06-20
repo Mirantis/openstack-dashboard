@@ -33,3 +33,8 @@ NOVA_PROJECT = 'admin'
 # EMAIL_PORT = 25
 ## EMAIL_HOST_USER = 'djangomail'
 ## EMAIL_HOST_PASSWORD = 'top-secret!'
+
+#AUTHENTICATION_BACKENDS = ('django_auth_ldap.backend.LDAPBackend',)
+#AUTH_LDAP_SERVER_URI = "ldap://testbed4pmo.vm.mirantis.net"
+#AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,ou=people,o=mirantis,dc=mirantis,dc=net"
+

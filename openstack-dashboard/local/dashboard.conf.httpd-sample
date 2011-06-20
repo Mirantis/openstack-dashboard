@@ -1,0 +1,4 @@
+WSGIScriptAlias /dashboard /opt/openstack-dashboard/dashboard/wsgi/django.wsgi
+WSGIPythonPath /opt/openstack-dashboard
+
+Alias /media /opt/openstack-dashboard/media
