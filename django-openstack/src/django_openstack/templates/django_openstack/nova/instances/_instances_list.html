@@ -1,7 +1,8 @@
+{% load i18n %}
       {% if instances %}
       <table style="width: 100%">
         <tr>
-          <th>ID</th>
+          <th>Name</th>
           <th>Image</th>
           <th>Size</th>
           <th>IP</th>
@@ -73,7 +74,7 @@
             </td>
           {% else %}
 
-            <td><a href="{% url nova_instances_detail project.projectname instance.id %}">{{ instance.id }} {% if instance.displayName %}({{ instance.displayName }}){% endif %}
+            <td><a href="{% url nova_instances_detail project.projectname instance.id %}">{% if instance.displayName %}{{ instance.displayName }}{% endif %} ({{ instance.id }})
               </a></td>
             <td class="odd">{{ instance.image_id }}</td>
             <td>{{ instance.instance_type }}</td>
@@ -98,7 +99,7 @@
         <div class="ui-state-highlight ui-corner-all">
           <p>
             <span class="ui-icon ui-icon-info"></span>
-            No instances are currently running. You may start a new instance from the <a href="{% url nova_images project.projectname %}">images</a> tab.
+            {% trans "No instances are currently running. You may start a new instance from the"%} <a href="{% url nova_images project.projectname %}">images</a> tab.
           </p>
         </div>
       </div>
