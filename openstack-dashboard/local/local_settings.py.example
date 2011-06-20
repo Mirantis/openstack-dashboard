@@ -68,3 +68,7 @@ NOVA_PROJECT = 'admin'
 #            },
 #        }
 #}
+
+#AUTHENTICATION_BACKENDS = ('django_auth_ldap.backend.LDAPBackend',)
+#AUTH_LDAP_SERVER_URI = "ldap://testbed4pmo.vm.mirantis.net"
+#AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,ou=people,o=mirantis,dc=mirantis,dc=net"
