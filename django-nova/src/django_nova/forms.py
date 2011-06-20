@@ -125,7 +125,8 @@ class LaunchInstanceForm(forms.Form):
 
     count = forms.ChoiceField(choices=[(x, x) for x in range(1, 6)])
     size = forms.ChoiceField()
-    key_name = forms.ChoiceField()
+    key_name = forms.ChoiceField(required=False)
+    dumb_nics = forms.IntegerField(min_value=0)
     #security_group = forms.ChoiceField()
     user_data = forms.CharField(required=False, widget=forms.widgets.Textarea(attrs={'rows': 4}))
 

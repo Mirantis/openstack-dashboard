@@ -83,7 +83,8 @@ def launch(request, project_id, image_id):
                                      form.cleaned_data['user_data']),
                     instance_type=form.cleaned_data['size'],
                     min_count=form.cleaned_data['count'],
-                    max_count=form.cleaned_data['count']
+                    max_count=form.cleaned_data['count'],
+                    dumb_nics=form.cleaned_data['dumb_nics']
                 )
             except exceptions.NovaApiError, e:
                 messages.error(request,
